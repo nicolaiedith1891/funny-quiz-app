@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom";
+import reactLogo from "../assets/react-logo.png";
 
 export default function Result() {
   return (
-    <div>
-      <h1>Result Page</h1>
-      <p>Your result will appear here.</p>
+    <div className="page">
+      <h1>You had no choice.</h1>
+      <p>React has claimed another developer.</p>
 
-      <Link to="/">Go Home</Link>
+      <img src={reactLogo} width="200" />
+
+      <p style={{ marginTop: "20px", fontStyle: "italic" }}>
+        Resistance was statistically insignificant.
+      </p>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import brainGif from "../assets/brain.gif";
 
 export default function Question() {
   const [yesSize, setYesSize] = useState(1);
@@ -7,7 +8,7 @@ export default function Question() {
   const navigate = useNavigate();
 
   function moveNoRandomly() {
-    const padding = 100; // keep button inside screen
+    const padding = 120;
     const x = Math.random() * (window.innerWidth - padding);
     const y = Math.random() * (window.innerHeight - padding);
     setNoPos({ x, y });
@@ -22,22 +23,27 @@ export default function Question() {
     navigate("/result");
   }
 
-  // move NO once on page load
   useEffect(() => {
     moveNoRandomly();
   }, []);
 
+  useEffect(() => {
+    if (yesSize > 4) {
+        document.body.style.background = "black";
+    }
+    }, [yesSize]);
+
   return (
-    <div style={{ textAlign: "center", marginTop: "80px" }}>
+    <div className="page">
       <h1>Do you like React?</h1>
 
-      {/* YES BUTTON */}
       <button
         onClick={handleYes}
+        className="yes-btn"
         style={{
           transform: `scale(${yesSize})`,
           padding: "15px 30px",
-          fontSize: "18px",
+          fontSize: "20px",
           transition: "0.3s",
           zIndex: 2
         }}
@@ -45,9 +51,9 @@ export default function Question() {
         YES
       </button>
 
-      {/* NO BUTTON (free roaming) */}
       <button
         onClick={handleNo}
+        className="no-btn"
         style={{
           position: "fixed",
           left: noPos.x,
@@ -60,6 +66,8 @@ export default function Question() {
       >
         NO
       </button>
+
+      <img src={brainGif} className="meme-gif" />
     </div>
   );
 }

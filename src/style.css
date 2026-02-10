@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  overflow: hidden;
+}
+
+/* Center all pages nicely */
+.page {
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* Big dramatic title */
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 15px rgba(0,255,255,0.6);
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* YES button style */
+.yes-btn {
+  background: #00ff88;
+  color: black;
+}
+
+/* NO button style */
+.no-btn {
+  background: #ff0044;
+  color: white;
+}
+
+/* Floating meme gif */
+.meme-gif {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  opacity: 0.8;
+}
