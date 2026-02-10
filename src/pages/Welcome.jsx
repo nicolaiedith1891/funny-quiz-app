@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import reactGif from "../assets/react.gif";
+import reactGif from "../assets/cat-cat-love.gif";
 
 export default function Welcome() {
   return (

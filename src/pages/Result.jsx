@@ -1,4 +1,4 @@
-import reactLogo from "../assets/react-logo.png";
+import reactLogo from "../assets/yippee-cat-kitty.gif";
 
 export default function Result() {
   return (

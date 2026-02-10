@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import brainGif from "../assets/brain.gif";
+import brainGif from "../assets/cat-love-you.gif";
 
 export default function Question() {
   const [yesSize, setYesSize] = useState(1);
