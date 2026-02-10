@@ -4,46 +4,72 @@ body {
   background: linear-gradient(135deg, #1a1a2e, #16213e);
   color: white;
   overflow: hidden;
+  height: 100vh;
 }
 
-/* Center all pages nicely */
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 80px;
+  height: 100vh;
 }
 
-/* Big dramatic title */
 h1 {
-  font-size: 3rem;
-  text-shadow: 0 0 15px rgba(0,255,255,0.6);
+  font-size: 4rem;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  margin-bottom: 20px;
 }
 
-/* Buttons */
 button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
 }
 
-/* YES button style */
 .yes-btn {
   background: #00ff88;
   color: black;
+  margin-right: 30px;
 }
 
-/* NO button style */
 .no-btn {
   background: #ff0044;
   color: white;
 }
 
-/* Floating meme gif */
-.meme-gif {
+img {
+  max-width: 400px;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+.hearts {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 150px;
-  opacity: 0.8;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+.heart {
+  position: absolute;
+  top: -50px;
+  animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
 }

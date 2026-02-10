@@ -35,7 +35,7 @@ export default function Question() {
 
   return (
     <div className="page">
-      <h1>Do you like React?</h1>
+      <h1>Do you wanna be my Valentine?</h1>
 
       <button
         onClick={handleYes}
@@ -67,7 +67,7 @@ export default function Question() {
         NO
       </button>
 
-      <img src={brainGif} className="meme-gif" />
+      <img src={brainGif} className="meme-gif" style={{ maxWidth: "400px" }} />
     </div>
   );
 }

@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/react-quiz-app/"
+  base: "/funny-quiz-app/"
 });
 
